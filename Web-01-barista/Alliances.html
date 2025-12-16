@@ -446,7 +446,39 @@
                 width: 400px;
             }
 
+        }
 
+        .hamburger { display: none; font-size: 2em; cursor: pointer; color: #4b5231; margin-left: auto; margin-right: 1em; }
+
+        #menu-toggle { display: none; }
+
+        #menu-toggle:checked ~ .rightnav #firstnav { display: flex; }
+
+        @media (max-width: 768px) {
+
+            .hamburger { display: block; }
+
+            .rightnav #firstnav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background-color: white; padding: 1em; box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 1000; }
+
+            .rightnav #firstnav li { margin: 0.5em 0; }
+
+            .rightlogo { display: none; }
+
+            .navbar { position: relative; }
+
+            .main { width: 100%; padding: 0 1em; }
+
+            img { max-width: 100%; height: auto; }
+
+            .alliance-text { flex-direction: column; }
+
+            .alliance-img { text-align: center; }
+
+        }
+
+        @media (min-width: 769px) {
+
+            .main { width: 90%; margin: 0 auto; }
 
         }
     </style>
@@ -458,15 +490,19 @@
             <a href="index.html"><img src="https://www.barista.co.in/themes/custom/barista/img/logo.svg"
                     alt="Barista Logo"></a>
         </div>
-        <div class="nav-links">
-            <a href="story.html">Our Story</a>
-            <a href="store-locator.html">Store Locator</a>
-            <a href="Franchise with us.html">Franchise with us</a>
-            <a href="Alliances.html" class="active">Alliances</a>
-            <a href="Be a Barista.html">Be a Barista</a>
-            <a href="Coffee Vending.html">Coffee Vending</a>
-            <a href="careers.html">Careers</a>
-            <a href="shop.html">Shop</a>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">☰</label>
+        <div class="rightnav">
+            <nav id="firstnav">
+                <li><a href="story.html">Our Story</a></li>
+                <li><a href="store-locator.html">Store Locator</a></li>
+                <li><a href="Franchise with us.html">Franchise with us</a></li>
+                <li><a href="Alliances.html" class="active">Alliances</a></li>
+                <li><a href="Be a Barista.html">Be a Barista</a></li>
+                <li><a href="Coffee Vending.html">Coffee Vending</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </nav>
         </div>
         <div class="rightlogo">
             <img src="https://www.barista.co.in/themes/custom/barista/img/logo-diner.svg" alt="">
